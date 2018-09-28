@@ -20,9 +20,9 @@
         android:layout_marginStart="16dp"
         android:background="@drawable/menu_item"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/currentLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/currentLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -56,16 +56,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/currentLayout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/menu_item"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/previousLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/previousLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/linearLayout1"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +108,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/previousLayout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginBottom="8dp"
@@ -120,9 +120,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toEndOf="@+id/currentLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/currentLayout">
 
         <LinearLayout
             android:layout_width="match_parent"

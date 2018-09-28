@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".MainUI">
+    tools:context=".Activities.MainUI">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.241" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/routeno"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_marginEnd="8dp"
@@ -69,10 +69,10 @@
         android:text="Route - 177"
         android:textColor="#484848"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/route"
         app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="@+id/route"
+        app:layout_constraintTop_toBottomOf="@+id/route" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -82,7 +82,7 @@
         app:layout_constraintGuide_begin="192dp" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/route"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -93,7 +93,7 @@
         android:textAllCaps="true"
         android:textColor="#385fa5"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/routeno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +101,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/previousLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
@@ -109,11 +109,12 @@
         android:layout_marginStart="16dp"
         android:background="@drawable/menu_item"
         android:orientation="horizontal"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/currentLayout">
 
         <ImageView
             android:id="@+id/imageView6"
@@ -142,7 +143,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/previousStop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/circular_medium"
@@ -153,7 +154,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/currentLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
@@ -162,11 +163,12 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/menu_item"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/previousLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/nextLayout">
 
         <ImageView
             android:id="@+id/imageView4"
@@ -194,7 +196,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/currentStop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/circular_medium"
@@ -205,7 +207,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/nextLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginEnd="16dp"
@@ -213,6 +215,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/menu_item"
         android:orientation="horizontal"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -244,7 +247,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/nextStop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/circular_medium"
@@ -265,11 +268,11 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/menu_item"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintBottom_toTopOf="@+id/nextLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
+        app:layout_constraintTop_toBottomOf="@+id/routeno">
 
         <ImageView
             android:id="@+id/imageView3"
@@ -297,7 +300,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/onBoard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/circular_medium"
